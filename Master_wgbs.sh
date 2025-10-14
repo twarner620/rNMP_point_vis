@@ -8,7 +8,7 @@ ref='/storage/home/hcoda1/5/dkundnani3/p-fstorici3-0/rich_project_bio-storici/re
 bref=$(basename $ref); base="${bref%.*}" #defining base from reference file for naming output files
 grouplist='WT KO-T3-8' #List of celllines to be visualized, matches the identifiers in files
 out='/storage/coda1/p-fstorici3/0/shared/WGBS_dist/meth_dist' #Output directory
-scripts='/storage/home/hcoda1/5/dkundnani3/p-fstorici3-0/rich_project_bio-storici/bin/GIT/rNMP_point_vis/rNMP_point_vis' #your github folder
+scripts='bin/GIT/rNMP_point_vis' #Locaiton of This github folder
 
 #first step to activet enviroment with Deeptools and python
 conda activate conda-env
