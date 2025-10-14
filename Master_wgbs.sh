@@ -31,8 +31,8 @@ cd $bw
 for group in $grouplist; do
 deeptoolscen &
 done
-#Also visualizing using python script for individual celltypes and all celltypes together
 
+#Also visualizing using python script, all celltypes together
 cd $out
 cp $base*tab tab/
 python $scripts/all_celltypes_vis.py "$(echo "tab/$base"'*tab')" 100 '3.0Kb' cntr '#E377C2,#D62728' nolegend nosep nopub & #The colors are defined based on alphabetical order of sample names (KO will be before WT), check 'files for respective color code'
