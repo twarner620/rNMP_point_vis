@@ -61,8 +61,8 @@ bedtools genomecov -dz -scale $(echo 1/$riboperbaseforbin|bc -l) -i $file -g $ge
 bedGraphToBigWig $out/$(basename $file .bed).bg $genome $out/$(basename $file .bed).bw
 
 echo "3.Separating Strand information"
-grep -e '\s+$' $file >  $out/$(basename $file .bed)_pos.bed
-grep -e '\s-$' $file >  $out/$(basename $file .bed)_neg.bed
+awk '$6 == "+" { print }' "$file" > "$out/$(basename "$file" .bed)_pos.bed"
+awk '$6 == "-" { print }' "$file" > "$out/$(basename "$file" .bed)_neg.bed"
 
 echo "4.Getting bedgraph and BigWig files for separate strands"
 ##Separate Strands
